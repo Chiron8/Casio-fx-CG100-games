@@ -84,7 +84,7 @@ while won == 2:
           goto(pos[i+8][0], pos[i+8][1])
           penup()
       if i == 7:
-        if plays[1] == plays[i-2] == plays[i-4] and plays[i] != 2:
+        if plays[i] == plays[i-2] == plays[i-4] and plays[i] != 2:
           won = plays[7]
           setposition(pos[i][0], pos[i][1])
           pendown()
