@@ -67,25 +67,25 @@ while won == 2:
           won = plays[i]
           setposition(pos[i][0], pos[i][1])
           pendown()
-          goto(pos[i+2][0], pos[i+2][1]
+          goto(pos[i+2][0], pos[i+2][1])
       if i == 7 or i == 8 or i == 9:
         if plays[i] == plays[i-3] == plays[i-6]:
           won = plays[i]
           setposition(pos[i][0], pos[i][1])
           pendown()
-          goto(pos[i-6][0], pos[i-6][1]
+          goto(pos[i-6][0], pos[i-6][1])
       if i == 1:
         if plays[i] == plays[i+4] == plays[i+8]:
           won = plays[1]
           setposition(pos[i][0], pos[i][1])
           pendown()
-          goto(pos[i+8][0], pos[i+8][1]
+          goto(pos[i+8][0], pos[i+8][1])
       if i == 7:
         if plays[1] == plays[i-2] == plays[i-4]:
           won = plays[7]
           setposition(pos[i][0], pos[i][1])
           pendown()
-          goto(pos[i-4][0], pos[i-4][1]    
+          goto(pos[i-4][0], pos[i-4][1])
   else:
     print("Already played, try again")
 
