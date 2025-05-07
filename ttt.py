@@ -7,10 +7,10 @@ for i in range(-75, 75, 75):
   pendown()
   goto(i, -75)
 
-for i in range(-50, 50, 50):
+for j in range(-10, 65, 30):
   penup()
-  setposition(-100, i)
+  setposition(-125, j)
   pendown()
-  goto(100, i)
+  goto(75, j)
 
 penup()
