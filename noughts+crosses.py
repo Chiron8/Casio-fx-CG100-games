@@ -128,6 +128,13 @@ else:
   goto(-150, 0)
   pendown()
   write("Crosses wins!")
+
+penup()
+for i in range(1, 10):
+    goto(-100, -100)
+    goto(100, 100)
 x = input()
+
+
     
     
