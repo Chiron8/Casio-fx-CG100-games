@@ -43,7 +43,7 @@ while won == 2:
     setposition(pos[key][0], pos[key][1])
     pendown()
     if turn == 1:
-      pencolor("green")
+      pencolor("orange")
       goto(xcor()+10, ycor()+10)
       penup()
       setposition(xcor()-10, ycor())
