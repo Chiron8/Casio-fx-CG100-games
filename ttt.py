@@ -1,8 +1,8 @@
 from turtle import *
 
 speed(fastest)
-for i in range(50, 150, 50):
+for i in range(-100, 100, 100):
   penup()
-  setposition(i, 50)
+  setposition(i, 100)
   pendown()
-  goto(i, 200)
+  goto(i, -100)
