@@ -45,6 +45,8 @@ while won == 2:
     goto(-150, 0)
     pendown()
     write("Draw")
+    penup()
+    won = -1
     break
     
   key = int(input("Enter Key: "))
