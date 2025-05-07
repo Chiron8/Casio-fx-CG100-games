@@ -73,7 +73,7 @@ while won == 2:
   else:
     print("Already played, try again")
 
-if won = 0:
+if won == 0:
   print("Noughts has won!")
 else:
   print("Crosses has won!")
