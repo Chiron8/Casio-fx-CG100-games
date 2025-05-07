@@ -24,7 +24,7 @@ penup()
 while won == False:
 	key = input("Enter Key: ")
 	if plays[key] == 2:
-		  	setposition(pos[key])
+		  	setposition(pos[key][0], pos[key[[1])
   			pendown()
 		if turn == 1:
   			goto(xcor()+10, ycor()+10)
