@@ -1,3 +1,7 @@
+# Maintainer: Chiron Horwood
+# Github: Chiron8
+# Email: chiron.dev8@gmail.com
+
 from turtle import *
 #variables
 pos = [[0, 0], [-100, -60], [-20, -60], [75, -60], [-100, -10], [-20, -10], [75, -10], [-100, 40], [-20, 40], [75, 40]]
