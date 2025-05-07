@@ -8,7 +8,7 @@ key= 0
 
 #turtle config
 speed("fastest")
-pencolor("blue")
+pencolor("black")
 width(3)
 hideturtle()
 
@@ -34,7 +34,7 @@ for i in range(1, 10):
 #main loop
 while won == 2:
   penup()
-  pencolor("blue")
+  pencolor("black")
   for i in range(1, 10):
     goto(-100, -100)
     goto(100, 100)
@@ -43,6 +43,7 @@ while won == 2:
     setposition(pos[key][0], pos[key][1])
     pendown()
     if turn == 1:
+      pencolor("green")
       goto(xcor()+10, ycor()+10)
       penup()
       setposition(xcor()-10, ycor())
@@ -52,6 +53,7 @@ while won == 2:
       plays[key] = 1
       penup()
     elif turn == 0:
+      pencolor("blue")
       goto(xcor()+10, ycor())
       goto(xcor(), ycor()+10)
       goto(xcor()-10, ycor())
@@ -65,30 +67,30 @@ while won == 2:
       if i == 1 or i == 4 or i == 9:
         if plays[i] == plays[i+1] == plays[i+2] and plays[i] != 2:
           won = plays[i]
-          setposition(pos[i][0], pos[i][1])
+          setposition(pos[i][0]+5, pos[i][1]+5)
           pendown()
-          goto(pos[i+2][0], pos[i+2][1])
+          goto(pos[i+2][0]+5, pos[i+2][1]+5)
           penup()
       if i == 7 or i == 8 or i == 9:
         if plays[i] == plays[i-3] == plays[i-6] and plays[i] != 2:
           won = plays[i]
-          setposition(pos[i][0], pos[i][1])
+          setposition(pos[i][0]+5, pos[i][1]+5)
           pendown()
-          goto(pos[i-6][0], pos[i-6][1])
+          goto(pos[i-6][0]+5, pos[i-6][1]+5)
           penup()
       if i == 1:
         if plays[i] == plays[i+4] == plays[i+8] and plays[i] != 2:
           won = plays[1]
-          setposition(pos[i][0], pos[i][1])
+          setposition(pos[i][0]+5, pos[i][1]+5)
           pendown()
-          goto(pos[i+8][0], pos[i+8][1])
+          goto(pos[i+8][0]+5, pos[i+8][1]+5)
           penup()
       if i == 7:
         if plays[i] == plays[i-2] == plays[i-4] and plays[i] != 2:
           won = plays[7]
-          setposition(pos[i][0], pos[i][1])
+          setposition(pos[i][0]+5, pos[i][1]+5)
           pendown()
-          goto(pos[i-4][0], pos[i-4][1])
+          goto(pos[i-4][0]+5, pos[i-4][1]+5)
           penup()
   else:
     print("Already played, try again")
