@@ -4,7 +4,8 @@ pos = [[0, 0], [-100, -60], [-20, -60], [75, -60], [-100, -10], [-20, -10], [75,
 plays = [2, 2, 2, 2, 2, 2, 2, 2, 2, 2]
 turn = 0
 won = 2
-key= 0
+key = 0
+full = False
 
 #turtle config
 speed("fastest")
@@ -19,7 +20,7 @@ for i in [-50, 50]:
   pendown()
   goto(i, -75)
 
-for j in [-25, 25]:
+for i in [-25, 25]:
   penup()
   setposition(-125, j)
   pendown()
@@ -38,6 +39,14 @@ while won == 2:
   for i in range(1, 10):
     goto(-100, -100)
     goto(100, 100)
+  if full == True:
+    clear()
+    penup()
+    goto(-150, 0)
+    pendown()
+    write("Draw")
+    break
+    
   key = int(input("Enter Key: "))
   if plays[key] == 2:
     setposition(pos[key][0], pos[key][1])
@@ -63,7 +72,10 @@ while won == 2:
       penup()
 
     pencolor("red")
+    full = True
     for i in range(1, 9):
+      if plays[i] == 2:
+        full = False
       if i == 1 or i == 4 or i == 9:
         if plays[i] == plays[i+1] == plays[i+2] and plays[i] != 2:
           won = plays[i]
@@ -92,6 +104,7 @@ while won == 2:
           pendown()
           goto(pos[i-4][0]+5, pos[i-4][1]+5)
           penup()
+
   else:
     print("Already played, try again")
 
@@ -100,9 +113,15 @@ for i in range(1, 10):
     goto(100, 100)
 
 if won == 0:
-  print("Noughts has won!")
+  penup()
+  goto(-150, 0)
+  pendown()
+  write("Noughts wins!")
 else:
-  print("Crosses has won!")
+  penup()
+  goto(-150, 0)
+  pendown()
+  write("Crosses wins!")
 x = input()
     
     
