@@ -8,38 +8,52 @@ won = False
 key= 0
 speed(10000)
 
+hideturtle()
+
 for i in [-50, 50]:
-	penup()
-  	setposition(i, 75)
-  	pendown()
-  	goto(i, -75)
+  penup()
+  setposition(i, 75)
+  pendown()
+  goto(i, -75)
 
 for j in [-25, 25]:
-	penup()
-  	setposition(-125, j)
-  	pendown()
-  	goto(125, j)
+  penup()
+  setposition(-125, j)
+  pendown()
+  goto(125, j)
 
 penup()
+for i in range(1, 10):
+    goto(-100, -100)
+    goto(100, 100)
+
 while won == False:
-	key = input("Enter Key: ")
-	if plays[key] == 2:
-		  	setposition(pos[key][0], pos[key[[1])
-  			pendown()
-		if turn == 1:
-  			goto(xcor()+10, ycor()+10)
-			penup()
-			setposition(xcor()-10, ycor())
-			pendown()
-			goto(xcor()+10, ycor()-10)
-			turn = 0
-		if turn == 0:
-			goto(xcor()+10, ycor())
-			goto(xcor(), ycor()+10)
-			goto(xcor()-10, ycor())
-			goto(xcor(), ycor()-10)
-			turn = 1
-	else:
-		print("Already played, try again")
-	
+  key = int(input("Enter Key: "))
+  if plays[key] == 2:
+    setposition(pos[key][0], pos[key][1])
+    pendown()
+    if turn == 1:
+      goto(xcor()+10, ycor()+10)
+      penup()
+      setposition(xcor()-10, ycor())
+      pendown()
+      goto(xcor()+10, ycor()-10)
+      turn = 0
+      plays[key] = 1
+      penup()
+    if turn == 0:
+      goto(xcor()+10, ycor())
+      goto(xcor(), ycor()+10)
+      goto(xcor()-10, ycor())
+      goto(xcor(), ycor()-10)
+      turn = 1
+      plays[key] = 0
+      penup()
+    for i in range(1, 10):
+        goto(-100, -100)
+        goto(100, 100)
+  else:
+    print("Already played, try again")
+  
+    
     
