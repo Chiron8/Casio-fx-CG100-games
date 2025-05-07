@@ -9,6 +9,7 @@ key= 0
 #turtle config
 speed("fastest")
 pencolor("blue")
+width(3)
 hideturtle()
 
 #grid
@@ -32,6 +33,8 @@ for i in range(1, 10):
 
 #main loop
 while won == 2:
+  penup()
+  pencolor("blue")
   for i in range(1, 10):
     goto(-100, -100)
     goto(100, 100)
@@ -57,26 +60,43 @@ while won == 2:
       plays[key] = 0
       penup()
 
+    pencolor("red")
     for i in range(1, 9):
       if i == 1 or i == 4 or i == 9:
         if plays[i] == plays[i+1] == plays[i+2]:
           won = plays[i]
+          setposition(pos[i][0], pos[i][1])
+          pendown()
+          goto(pos[i+2][0], pos[i+2][1]
       if i == 7 or i == 8 or i == 9:
         if plays[i] == plays[i-3] == plays[i-6]:
           won = plays[i]
+          setposition(pos[i][0], pos[i][1])
+          pendown()
+          goto(pos[i-6][0], pos[i-6][1]
       if i == 1:
         if plays[i] == plays[i+4] == plays[i+8]:
           won = plays[1]
+          setposition(pos[i][0], pos[i][1])
+          pendown()
+          goto(pos[i+8][0], pos[i+8][1]
       if i == 7:
         if plays[1] == plays[i-2] == plays[i-4]:
           won = plays[7]
+          setposition(pos[i][0], pos[i][1])
+          pendown()
+          goto(pos[i-4][0], pos[i-4][1]    
   else:
     print("Already played, try again")
+
+for i in range(1, 10):
+    goto(-100, -100)
+    goto(100, 100)
 
 if won == 0:
   print("Noughts has won!")
 else:
   print("Crosses has won!")
-  
+x = input()
     
     
