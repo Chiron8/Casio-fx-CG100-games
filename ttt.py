@@ -8,7 +8,7 @@ key= 0
 
 #turtle config
 speed("fastest")
-color("blue")
+pencolor("blue")
 hideturtle()
 
 #grid
@@ -48,7 +48,7 @@ while won == 2:
       turn = 0
       plays[key] = 1
       penup()
-    if turn == 0:
+    elif turn == 0:
       goto(xcor()+10, ycor())
       goto(xcor(), ycor()+10)
       goto(xcor()-10, ycor())
