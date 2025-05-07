@@ -4,7 +4,7 @@
 
 from turtle import *
 #variables
-pos = [[0, 0], [-100, -60], [-20, -60], [75, -60], [-100, -10], [-20, -10], [75, -10], [-100, 40], [-20, 40], [75, 40]]
+pos = [[0, 0], [-100, -60], [-20, -60], [75, -60], [-100, -10], [-5, -5], [75, -10], [-100, 40], [-20, 40], [75, 40]]
 plays = [2, 2, 2, 2, 2, 2, 2, 2, 2, 2]
 turn = 0
 won = 2
@@ -114,9 +114,13 @@ while won == 2:
   else:
     print("Already played, try again")
 
-for i in range(1, 10):
+for i in range(1, 7):
     goto(-100, -100)
     goto(100, 100)
+
+clear()
+pencolor("black")
+
 
 if won == 0:
   penup()
