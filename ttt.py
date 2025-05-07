@@ -22,9 +22,9 @@ for i in [-50, 50]:
 
 for i in [-25, 25]:
   penup()
-  setposition(-125, j)
+  setposition(-125, i)
   pendown()
-  goto(125, j)
+  goto(125, i)
 
 #pause
 penup()
