@@ -11,6 +11,6 @@ for j in [-25, 25]:
   penup()
   setposition(-125, j)
   pendown()
-  goto(75, j)
+  goto(125, j)
 
 penup()
