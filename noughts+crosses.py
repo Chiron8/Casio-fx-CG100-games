@@ -2,6 +2,8 @@
 # Github: Chiron8
 # Email: chiron.dev8@gmail.com
 
+# The calculator doesn't support the time package so I just have the turtle move round a couple times to give the same effect
+
 from turtle import *
 #variables
 pos = [[0, 0], [-100, -60], [-5, -60], [85, -60], [-100, -5], [-5, -5], [85, -5], [-100, 45], [-5, 45], [85, 45]]
